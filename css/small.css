@@ -121,6 +121,9 @@ a {
   right: 1%;
   text-align: right;
 }
+.active {
+  border-bottom: 6px solid var(--teal);
+}
 .button {
   background-color: var(--teal);
   color: white;
@@ -196,6 +199,7 @@ footer img {
 .socialbox img {
   max-width: 3rem;
   margin: 0;
+  padding: 0.5rem;
 }
 .contact {
   margin-top: 5rem;
@@ -292,3 +296,101 @@ form {
 section {
   margin-top: 2rem;
 }
+/* ----------About Page--------- */
+
+.tilegrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* grid-template-rows: auto; */
+  grid-gap: 1rem;
+  margin-top: 4rem;
+}
+
+ul.tilegrid {
+  list-style-type: none;
+  padding: 0;
+}
+.flip-card-front h2,
+.flip-card-back h2 {
+  line-height: 2.5rem;
+}
+.flip-card-front p,
+.flip-card-front h2,
+.flip-card-back p,
+.flip-card-back h2 {
+  padding: 1rem;
+  margin: 0;
+}
+.flip-card-back p {
+  text-align: left;
+}
+.tilegrid li {
+  margin: 0 auto;
+}
+.colorblock {
+  background-color: var(--blue);
+  width: 300px;
+  height: 300px;
+}
+.colorblock2 {
+  background-color: var(--teal);
+  width: 300px;
+  height: 300px;
+}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.flip-card-front {
+  /* background-color: #bbb;
+  color: black; */
+}
+.flip-card-back {
+  background-color: var(--teal);
+  transform: rotateY(180deg);
+}
+.colorblock h2,
+.colorblock p {
+  color: white;
+}
+/* .tile {
+  background-color: var(--teal);
+  height: 400px;
+  width: 600px;
+  content: "";
+} */
+/* .tilegrid > div:nth-child(odd) {
+  background-color: var(--teal);
+} */
+/* .img-tile {
+  height: 400px;
+  width: 600px;
+  object-fit: cover;
+} */
