@@ -44,6 +44,7 @@
     max-width: 980px;
     margin: 0 auto;
     display: grid;
+    grid-template-columns: repeat(5, 1fr);
     grid-template-areas:
       "h2 h2 h2 h2 h2"
       "h3 h3 img img img"
@@ -55,12 +56,19 @@
   }
   .introbox h3 {
     grid-area: h3;
+    max-width: 80%;
+    justify-self: center;
   }
   .introbox img {
     grid-area: img;
+    align-self: center;
+    justify-self: center;
+    /* padding-right: 2rem; */
   }
   .introbox p {
     grid-area: p;
+    max-width: 80%;
+    justify-self: center;
   }
   .introbox a {
     grid-area: a;
@@ -149,6 +157,8 @@
   .graph p {
     grid-column: 3;
     text-align: left;
+    justify-self: left;
+    padding-left: 1rem;
   }
   .demographics {
     max-width: 40%;
