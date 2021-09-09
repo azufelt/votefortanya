@@ -21,7 +21,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <script defer src="js/script.js"></script>
-    <script
+    <script src="contact-form-handler.php"></script>
+    <script src="email.js"></script>
+    <!-- <script
       type="text/javascript"
       src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
     ></script>
@@ -37,7 +39,7 @@
         ftypes[5] = "text";
       })(jQuery);
       var $mcj = jQuery.noConflict(true);
-    </script>
+    </script> -->
 
     <title>Vote Tanya Willis</title>
   </head>
@@ -51,145 +53,42 @@
       <nav>
         <ul class="navmenu">
           <li><a class="ham">&#9776;</a></li>
-          <li><a href="index.html" class="close1">Our Town</a></li>
-          <li><a href="elkridge.html" class="close2 active">Our Future</a></li>
+          <li><a href="/" class="close1 active">Our Town</a></li>
+          <li><a href="elkridge.html" class="close2">Our Future</a></li>
           <li><a href="about.html" class="close3">Tanya's Story</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <h1>Community Interest.</h1>
-      <section class="planning blue">
-        <img
-          class="imgbox"
-          src="images/sunrisemountains.jpg"
-          alt="Photograph Utah mountains at sunrise taken by Gary Smith"
-        />
-        <h2 class="boxtitle">Planning For a Better Community.</h2>
-        <div class="iconbox">
-          <img
-            src="images/development-gears-white.png"
-            alt="gears development icon"
-            class="icon"
-          />
-          <h2>Development</h2>
-          <h3>
-            Elk Ridge is growing at a much faster pace than the city
-            anticipated.
-          </h3>
-        </div>
-        <div class="opaquebox">
-          <img
-            src="images/bullseye-icon.png"
-            alt="bullseye icon"
-            class="bullseye"
-          />
-          <ul>
-            <li>Establish a vision for the future of our beloved city.</li>
-            <li>Work with developers to maintain City vision.</li>
-            <li>Ensure developers follow city growth-plan.</li>
-            <li>Enforce fair compensation for developer concessions.</li>
-          </ul>
-        </div>
-      </section>
-      <section class="quotebox">
-        <!-- <h1 class="quote1">“</h1> -->
-        <img src="images/start-quote.png" alt="curly quotes" class="quote1" />
-        <h2 class="quote-title">
-          I chose to make Elk Ridge my home because I wanted to raise my kids in
-          a community that works hard, serves others, and has good values.
-          <br />I bet you did too.
-        </h2>
-        <!-- <h1 class="quote2">”</h1> -->
-        <img src="images/end-quote.png" alt="curly quotes" class="quote2" />
-      </section>
-      <section class="budget">
-        <div class="iconbox">
-          <img
-            src="images/piggy-bank-with-coin-blue.png"
-            alt="money coin penny bank"
-            class="icon"
-          />
-          <h2>Budget</h2>
-          <h3>
-            Items in the capital facilities plan need to funded to support
-            future endeavors.
-          </h3>
-        </div>
-        <div class="opaquebox">
-          <img
-            src="images/bullseye-icon.png"
-            alt="bullseye icon"
-            class="bullseye"
-          />
-          <ul>
-            <li>Make sure that contracts are being properly bid.</li>
-            <li>
-              Guarantee best service to price ratio for supplies and services.
-            </li>
-            <li>
-              Make sure spending reflects the best interests of the citizens of
-              Elk Ridge.
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="blue graph">
-        <h2 class="boxtitle">Growth Takes Planning.</h2>
-        <img
-          src="images/graph-blue.png"
-          alt="bar graph icon"
-          class="opaquebox icon"
-        />
-        <h2 class="num">101.6%</h2>
-        <p>Growth in Elk Ridge since 2010.</p>
-        <h2 class="num">$650,033</h2>
-        <p>Is the typical price of a home in Elk Ridge.</p>
-      </section>
-      <section class="demographics">
-        <div class="opaquebox">
-          <h2>We're Growing.</h2>
-          <!-- <h3>Home Prices:</h3> -->
-          <ul>
-            <li>Since 2012 home prices have increase 165%</li>
-            <li>32.2% of that growth occured within that lst year</li>
-            <!-- <li>something</li> -->
-          </ul>
-        </div>
-      </section>
-      <section class="community">
-        <div class="iconbox">
-          <img
-            src="images/community-hands-supporting-white.png"
-            alt="four hands holding wrists"
-            class="icon"
-          />
-          <h2>Partnership</h2>
-          <h3>
-            City government works best when the voices it represents are at all
-            levels of decision making.
-          </h3>
-        </div>
-        <div class="opaquebox">
-          <img
-            src="images/bullseye-icon.png"
-            alt="bullseye icon"
-            class="bullseye"
-          />
-          <ul>
-            <li>
-              My priority is to make sure communication remains a two way
-              street.
-            </li>
-            <li>
-              We need to make transparency and communication a priority for our
-              city. 
-            </li>
-            <li>Our community benefits when we can have open dialogue.</li>
-          </ul>
-        </div>
-      </section>
+    <main class="home-grid">
+      <a
+        href="mailto:ashley.zufelt@gmail.com?&subject=Tanya Willis for City Council"
+        class="button"
+        >Send me a message!</a
+      >
+
+      <form method="post" name="contact_form" action="contact-form-handler.php">
+        Your Name:
+        <input type="text" name="name" />
+
+        Email Address:
+        <input type="text" name="email" />
+
+        Message:
+        <textarea name="message"></textarea>
+
+        <input type="submit" value="Submit" />
+      </form>
+      <script language="JavaScript">
+        var frmvalidator = new Validator("contactform");
+        frmvalidator.addValidation("name", "req", "Please provide your name");
+        frmvalidator.addValidation("email", "req", "Please provide your email");
+        frmvalidator.addValidation(
+          "email",
+          "email",
+          "Please enter a valid email address"
+        );
+      </script>
     </main>
     <footer>
       <div class="contact blue">
@@ -232,7 +131,7 @@
           <!-- action="https://ashleyzufelt.us1.list-manage.com/subscribe/post?u=406784e7ced3ad375115b7c0e&amp;id=4d624f44ed" -->
           <!-- <div id="mc_embed_signup"> -->
           <form
-            action="thankyou.html"
+            action="https://ashleyzufelt.us1.list-manage.com/subscribe/post?u=406784e7ced3ad375115b7c0e&amp;id=4d624f44ed"
             method="post"
             id="mc-embedded-subscribe-form"
             name="mc-embedded-subscribe-form"
@@ -298,11 +197,13 @@
               </div>
               <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
               <div style="position: absolute; left: -5000px" aria-hidden="true">
+                <label for="hidden">*</label>
                 <input
                   type="text"
                   name="b_406784e7ced3ad375115b7c0e_4d624f44ed"
                   tabindex="-1"
                   value=""
+                  id="hidden"
                 />
               </div>
               <div class="clear">
@@ -324,14 +225,19 @@
             />
             <h4>Follow our Future:</h4>
             <div class="socialbox">
-              <img
-                src="images/social-icon-fb.png"
-                alt="facebook social icon tanya willis"
-              />
-              <img
-                src="images/social-icon-insta.png"
-                alt="instagram social icon tanya willis"
-              />
+              <a
+                href="https://www.facebook.com/VoteTanyaWillis"
+                target="_blank"
+              >
+                <img
+                  src="images/social-icon-fb.png"
+                  alt="facebook social icon tanya willis"
+              /></a>
+              <a href="https://www.instagram.com/vote.tanya.willis/"
+                ><img
+                  src="images/social-icon-insta.png"
+                  alt="instagram social icon tanya willis"
+              /></a>
             </div>
           </div>
         </section>

@@ -179,4 +179,7 @@
   .iconbox {
     padding: 1rem;
   }
+  .emailh3 {
+    align-self: flex-end;
+  }
 }
