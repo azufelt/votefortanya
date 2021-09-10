@@ -7,7 +7,6 @@
   }
   .navmenu li {
     display: inherit;
-    /* padding: 0 0.2rem; */
     margin: 1rem;
   }
   .navmenu li:hover :not(.active) {
@@ -35,10 +34,9 @@
 
   header {
     grid-template-columns: 40% auto;
-    /* border: 3px solid orange; */
   }
   .logobox {
-    max-width: 200px;
+    max-width: 14rem;
   }
   .introbox {
     max-width: 980px;
@@ -82,17 +80,21 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
   }
-  .contact section > form {
+  .email {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding-bottom: 2rem;
+  }
+  .socialbox {
     grid-column: 2/3;
     grid-row: 2/3;
   }
-  .contact section > h3 {
-    grid-column: 2/3;
-    grid-row: 1;
-  }
-  .contact section > div {
+  .profilepic {
     grid-column: 1/2;
     grid-row: 1/3;
+  }
+  .emailh3 {
+    padding: 0.6rem;
   }
   footer {
     margin-top: 3rem;
@@ -103,11 +105,13 @@
     border-radius: 50%;
   }
   /* --------community page------ */
+
   .quotebox {
     max-width: 600px;
     margin: 0 auto;
   }
-  .planning {
+  .planning,
+  .attrbox {
     display: grid;
     grid-template-columns: auto 50%;
     grid-template-rows: auto 1fr auto;
@@ -116,11 +120,12 @@
     grid-column: 1/3;
     grid-row: 1;
     justify-self: center;
+    object-fit: cover;
+    width: initial;
   }
   .planning .boxtitle {
     grid-column: 1/3;
     grid-row: 2;
-    /* border: 3px solid red; */
   }
   .planning .iconbox {
     grid-column: 2;
@@ -129,35 +134,46 @@
     grid-column: 1;
     grid-row: 3;
   }
+  .quote2 {
+    margin-right: 5rem;
+  }
   .budget {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: 1fr auto; */
     margin: 0;
   }
   .graph {
     display: grid;
-    grid-template-columns: 2fr 1fr 3fr;
-    /* grid-template-rows: 1fr auto; */
+    grid-template-columns: 1fr 2fr;
     align-items: center;
     justify-items: center;
   }
   .graph .boxtitle {
-    grid-column: 2 / span 2;
+    grid-column: 1 / span 2;
     grid-row: 1;
   }
   .graph img {
     grid-column: 1;
-    grid-row: 1 / span 3;
+    grid-row: 2;
   }
-  .graph .num {
+  .graph ul {
     grid-column: 2;
-    margin: 0;
+    grid-row: 2;
   }
-  .graph p {
-    grid-column: 3;
-    text-align: left;
-    justify-self: left;
+  .graph sup {
+    grid-column: 1/3;
+    grid-row: 3;
+  }
+  .stats {
+    display: flex;
+    flex-direction: column;
+  }
+  .stats li {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .stats p {
     padding-left: 1rem;
   }
   .demographics {
@@ -179,7 +195,16 @@
   .iconbox {
     padding: 1rem;
   }
-  .emailh3 {
-    align-self: flex-end;
+  .mobile {
+    display: none;
+  }
+  /* ---------Attributions page------- */
+  .databox {
+    border-right: 3px solid white;
+    border-bottom: none;
+  }
+  .attrbox .thanks {
+    grid-column: 2;
+    grid-row: 1;
   }
 }

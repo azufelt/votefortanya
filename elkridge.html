@@ -21,24 +21,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <script defer src="js/script.js"></script>
-    <script
-      type="text/javascript"
-      src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
-    ></script>
-    <script type="text/javascript">
-      (function ($) {
-        window.fnames = new Array();
-        window.ftypes = new Array();
-        fnames[1] = "FNAME";
-        ftypes[1] = "text";
-        fnames[0] = "EMAIL";
-        ftypes[0] = "email";
-        fnames[5] = "MMERGE5";
-        ftypes[5] = "text";
-      })(jQuery);
-      var $mcj = jQuery.noConflict(true);
-    </script>
-
     <title>Vote Tanya Willis</title>
   </head>
   <body>
@@ -95,14 +77,22 @@
       </section>
       <section class="quotebox">
         <!-- <h1 class="quote1">“</h1> -->
-        <img src="images/start-quote.png" alt="curly quotes" class="quote1" />
+        <img
+          src="images/start-quote.png"
+          alt="top curly quote"
+          class="quote1"
+        />
         <h2 class="quote-title">
           I chose to make Elk Ridge my home because I wanted to raise my kids in
           a community that works hard, serves others, and has good values.
           <br />I bet you did too.
         </h2>
         <!-- <h1 class="quote2">”</h1> -->
-        <img src="images/end-quote.png" alt="curly quotes" class="quote2" />
+        <img
+          src="images/end-quote.png"
+          alt="bottom curly quotes"
+          class="quote2"
+        />
       </section>
       <section class="budget">
         <div class="iconbox">
@@ -135,29 +125,38 @@
           </ul>
         </div>
       </section>
-      <section class="blue graph">
+      <section class="graph">
         <h2 class="boxtitle">Growth Takes Planning.</h2>
         <img
           src="images/graph-blue.png"
           alt="bar graph icon"
           class="opaquebox icon"
         />
-        <h2 class="num">101.6%</h2>
-        <p>Growth in Elk Ridge since 2010.</p>
-        <h2 class="num">$650,033</h2>
-        <p>Is the typical price of a home in Elk Ridge.</p>
+        <ul class="stats">
+          <li>
+            <h2>101.6%</h2>
+            <p>Growth in Elk Ridge since 2010.<sup>*</sup></p>
+          </li>
+          <li>
+            <h2>$650,033</h2>
+            <p>Is the typical price of a home in Elk Ridge.<sup>*</sup></p>
+          </li>
+          <li>
+            <h2>165%</h2>
+            <p>Increase in home prices since 2012.<sup>*</sup></p>
+          </li>
+          <!-- <sup><a href="/attributions.html">* Data Sources</a></sup> -->
+        </ul>
+        <sup><a href="/attributions.html">* Data Sources</a></sup>
       </section>
-      <section class="demographics">
+      <!-- <section class="demographics">
         <div class="opaquebox">
-          <h2>We're Growing.</h2>
-          <!-- <h3>Home Prices:</h3> -->
-          <ul>
-            <li>Since 2012 home prices have increase 165%</li>
-            <li>32.2% of that growth occured within that lst year</li>
-            <!-- <li>something</li> -->
-          </ul>
+          <img
+            src="images/elk-ridge-city-data.jpg"
+            alt="line graph city data"
+          />
         </div>
-      </section>
+      </section> -->
       <section class="community">
         <div class="iconbox">
           <img
@@ -195,149 +194,40 @@
       <div class="contact blue">
         <h2>Community Connect.</h2>
         <section>
-          <h3>Share your voice!</h3>
-          <!-- <form method="get" action="/">
-            <label for="messagename">Name:</label>
-            <input
-              type="text"
-              id="messagename"
-              name="messagename"
-              placeholder="First & Last Name"
-              pattern="[a-zA-Z] {5,}"
-              title="Enter both first and last names"
-              required
-            />
-            <br />
-            <label for="messageemail">Email:</label>
-            <input
-              type="email"
-              id="messageemail"
-              name="messageemail"
-              placeholder="name@email.com"
-              required
-            />
-            <br />
-            <label for="comments">Comment:</label>
-            <textarea
-              id="comments"
-              name="comments"
-              placeholder="Message"
-              rows="5"
-              required
-            ></textarea>
-            <span>
-              <input type="submit" value="Send Message" class="button"
-            /></span>
-          </form>-->
-          <!-- action="https://ashleyzufelt.us1.list-manage.com/subscribe/post?u=406784e7ced3ad375115b7c0e&amp;id=4d624f44ed" -->
-          <!-- <div id="mc_embed_signup"> -->
-          <form
-            action="thankyou.html"
-            method="post"
-            id="mc-embedded-subscribe-form"
-            name="mc-embedded-subscribe-form"
-            class="validate"
-            target="_blank"
-            novalidate
-          >
-            <div id="mc_embed_signup_scroll">
-              <!-- <h2>Subscribe</h2> -->
+          <div class="email">
+            <h3 class="emailh3">Send me a Message!</h3>
+            <a
+              href="mailto:votetanyawillis@gmail.com?&subject=Tanya Willis for City Council"
+              class="button"
+              >Send Email</a
+            >
+          </div>
 
-              <div class="mc-field-group">
-                <label for="mce-FNAME">First Name </label>
-                <input
-                  type="text"
-                  value=""
-                  name="FNAME"
-                  class=""
-                  id="mce-FNAME"
-                  placeholder="First & Last"
-                  required
-                />
-              </div>
-              <div class="mc-field-group">
-                <label for="mce-EMAIL"
-                  >Email Address <span class="asterisk">*</span>
-                </label>
-                <input
-                  type="email"
-                  value=""
-                  name="EMAIL"
-                  class="required email"
-                  id="mce-EMAIL"
-                  placeholder="name@email.com"
-                  required
-                />
-              </div>
-              <div class="mc-field-group">
-                <label for="mce-MMERGE5"
-                  >Message <span class="asterisk">*</span>
-                </label>
-                <input
-                  type="text"
-                  value=""
-                  name="MMERGE5"
-                  class="required"
-                  id="mce-MMERGE5"
-                  placeholder="Message"
-                  rows="5"
-                  required
-                />
-              </div>
-              <div id="mce-responses" class="clear">
-                <div
-                  class="response"
-                  id="mce-error-response"
-                  style="display: none"
-                ></div>
-                <div
-                  class="response"
-                  id="mce-success-response"
-                  style="display: none"
-                ></div>
-              </div>
-              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-              <div style="position: absolute; left: -5000px" aria-hidden="true">
-                <input
-                  type="text"
-                  name="b_406784e7ced3ad375115b7c0e_4d624f44ed"
-                  tabindex="-1"
-                  value=""
-                />
-              </div>
-              <div class="clear">
-                <input
-                  type="submit"
-                  value="Send Message"
-                  name="subscribe"
-                  id="mc-embedded-subscribe"
-                  class="button"
-                />
-              </div>
-            </div>
-          </form>
-          <!-- </div> -->
-          <div>
-            <img
-              src="images/TanyaWillis-4.png"
-              alt="profile pic tanya willis"
-            />
-            <h4>Follow our Future:</h4>
-            <div class="socialbox">
+          <div class="socialbox">
+            <h4>Follow My Campaign:</h4>
+            <a href="https://www.facebook.com/VoteTanyaWillis" target="_blank">
               <img
                 src="images/social-icon-fb.png"
                 alt="facebook social icon tanya willis"
-              />
-              <img
+            /></a>
+            <a href="https://www.instagram.com/vote.tanya.willis/"
+              ><img
                 src="images/social-icon-insta.png"
                 alt="instagram social icon tanya willis"
-              />
-            </div>
+            /></a>
+          </div>
+
+          <div class="profilepic">
+            <img
+              src="images/TanyaWillis-4.png"
+              alt="profile pic tanya willis for elk ridge city council"
+            />
           </div>
         </section>
       </div>
       <div class="copyright">
         <p>&copy;<span id="currentyear"></span> Tanya Willis<br /></p>
+        <sup><a href="/attributions.html">Attributions</a></sup>
       </div>
     </footer>
     <script
