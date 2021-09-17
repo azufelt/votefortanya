@@ -23,7 +23,7 @@
   }
   .home-grid section:first-child,
   .home-grid h2,
-  .home-grid a {
+  .home-grid > a {
     grid-column: 1/4;
   }
   .home-grid a {
@@ -68,7 +68,7 @@
     max-width: 80%;
     justify-self: center;
   }
-  .introbox a {
+  .introbox div {
     grid-area: a;
   }
   .contact {
